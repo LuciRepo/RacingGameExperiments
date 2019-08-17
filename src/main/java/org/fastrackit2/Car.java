@@ -8,7 +8,16 @@ public class Car {
     String brand =null;
     double litersPerKm;
     Engine engine;
-    public Car(double lng,int whC) {
+    Transmission carTransmission= new Transmission();
+
+    public void setCarTransmission(Transmission carTransmission) {
+        this.carTransmission = carTransmission;
+        carTransmission.gears=5;
+        System.out.println(carTransmission.gears);
+
+    }
+
+    public Car(double lng, int whC) {
         lenght=lng;
         wheelsCount=whC;
     }
